@@ -22,12 +22,25 @@ Set up autoloading for the app directory using Composer, similar to how Laravel 
   1. clone the project. 
   2. cd real-time-app
   3. composer install
-  5. open broweser and hit "http://localhost/realtime_sale/create_table.php" the database will be created.
+  5. open browser and hit "http://localhost/realtime_sale/create_table.php" the database will be created.
   4. open terminal and run "php server.php" to run the websocket server.
   6. now hit "http://localhost/realtime_sale/dashboard.php" for the dashboard.
 
 
 # Manual:
-  - Created the project hirarcy.
+  - Created the setting up project hirarcy as laravel.
   - Designed and setup the end-points of the apis.
-  - 
+  - chatGpt + weatherApi.
+
+# AI Help:
+ - Took the help while setting the sqlite db.
+ - Some of the design and charts design.
+
+# Important:
+- I have implemented the OpenAi recommendation but due to the paid api's keys i was not ablt to check the expected result. The Weather api is integrated and working fine.
+
+# APi Endpoints:
+- (POST) http://localhost/realtime_sale/index?route=orders   //for Order
+- (GET) http://localhost/realtime_sale/index?route=analytics   //for analytics
+- (GET) http://localhost/realtime_sale/index?route=weather   //for weather
+- (GET) http://localhost/realtime_sale/index?route=recommendations   //for recommations along weather
