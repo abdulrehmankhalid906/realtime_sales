@@ -37,7 +37,8 @@ Set up autoloading for the app directory using Composer, similar to how Laravel 
  - Some of the design and charts design.
 
 # Important:
-- I have implemented the OpenAi recommendation but due to the paid api's keys i was not ablt to check the expected result. The Weather api is integrated and working fine.
+- 05/19/2025: Just changed the AI-Model GPT to Mistral.
+- 05/18/2025: I have implemented the OpenAi recommendation but due to the paid api's keys i was not ablt to check the expected result. The Weather api is integrated and working fine.
 
 # APi Endpoints:
 - (POST) http://localhost/realtime_sale/index?route=orders   //for Order
