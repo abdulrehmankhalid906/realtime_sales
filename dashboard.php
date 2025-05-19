@@ -260,12 +260,13 @@
         const data = await res.json();
         console.log(data);
 
-        if (data.status) {
-          content.innerHTML = `
-            <ul class="list-group">
-              ${data.recommendations.map(r => `<li class="list-group-item">${r}</li>`).join('')}
-            </ul>
-          `;
+        if (data.status && Array.isArray(data.data) && data.data.length > 0) {
+          const formatted = data.data[0]
+            .replace(/\n/g, '<br>')
+            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+            .replace(/### (.*)/g, '<h5>$1</h5>');
+
+          content.innerHTML = `<div>${formatted}</div>`;
         } else {
           content.innerHTML = `<div class="alert alert-warning">No recommendations found.</div>`;
         }
